@@ -1,0 +1,36 @@
+"Everything Is An Array"
+
+Seacount was born from a very specific place: the sheer frustration of working with arrays in general-purpose languages like C, C++, and Java. (As a second-year student, I've felt this pain firsthand.)
+
+These languages can do anything, but that versatility comes at a cost. Array operations—the thing I needed most—were always complicated, verbose, and slow to write. The old adage, "Jack of all trades, master of none," fits perfectly.
+
+So, I started designing Seacount. This isn't another general-purpose language. It's a language that eats, sleeps, and breathes arrays. Now, I know there are other array languages out there, but let's be honest: beginners tell scary stories around campfires about their cryptic syntax and steep learning curves.
+
+My goal is different. I'll start with the basics of how Seacount works, and in later chapters, I'll introduce the unique features I believe are necessary for modern array programming.
+
+Let's start by looking at a basic Seacount file:
+
+
+@getall.scntbase
+
+@start main() {
+    rat array = {1, 2, 3.56, 2.12, 8};
+    array.chdep(float, int, double);
+    rat array_2 = {3, 2.4, 8.1, 6, 3.2};
+    array = array + array_2;
+    print(rat, array);
+
+    @empty(*arrays).confirm();
+}
+
+
+A lot of questions probably jumped into your mind. What is rat? What does chdep do? Why @empty(*arrays).confirm()? Don't worry—I'll explain it all.
+
+· @getall.scntbase is how you import Seacount's standard library, pulling in all the basic functions you'll need.
+· Programs begin execution in the @start main() function. The @ symbol flags keywords for the interpreter, making parsing more straightforward.
+· I deliberately kept the syntax—curly braces {}, semicolons ;—familiar to C-style languages. I didn't want to create something completely alien, especially for a project that might only be used by five people in the world once a year.
+
+And there you have it! The basic structure of a Seacount file, which uses the .scnt extension.
+
+This covers the absolute basics. In the next chapter, we'll dive into the heart of Seacount: the rat array.
+
